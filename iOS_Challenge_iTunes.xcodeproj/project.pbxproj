@@ -11,6 +11,8 @@
 		CAED12CE283D858200004CDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12CD283D858200004CDF /* ContentView.swift */; };
 		CAED12D0283D858300004CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAED12CF283D858300004CDF /* Assets.xcassets */; };
 		CAED12D3283D858300004CDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAED12D2283D858300004CDF /* Preview Assets.xcassets */; };
+		CAED12DB283D85EF00004CDF /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12DA283D85EF00004CDF /* AlbumViewModel.swift */; };
+		CAED12DD283D860800004CDF /* Result+Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12DC283D860800004CDF /* Result+Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CAED12CD283D858200004CDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CAED12CF283D858300004CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAED12D2283D858300004CDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CAED12DA283D85EF00004CDF /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		CAED12DC283D860800004CDF /* Result+Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Album.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				CAED12CB283D858200004CDF /* iOS_Challenge_iTunesApp.swift */,
+				CAED12D9283D85E600004CDF /* Models */,
 				CAED12CD283D858200004CDF /* ContentView.swift */,
 				CAED12CF283D858300004CDF /* Assets.xcassets */,
 				CAED12D1283D858300004CDF /* Preview Content */,
@@ -65,6 +70,15 @@
 				CAED12D2283D858300004CDF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CAED12D9283D85E600004CDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAED12DC283D860800004CDF /* Result+Album.swift */,
+				CAED12DA283D85EF00004CDF /* AlbumViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAED12DD283D860800004CDF /* Result+Album.swift in Sources */,
+				CAED12DB283D85EF00004CDF /* AlbumViewModel.swift in Sources */,
 				CAED12CE283D858200004CDF /* ContentView.swift in Sources */,
 				CAED12CC283D858200004CDF /* iOS_Challenge_iTunesApp.swift in Sources */,
 			);
