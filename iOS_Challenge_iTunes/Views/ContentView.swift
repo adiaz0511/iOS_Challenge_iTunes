@@ -49,6 +49,9 @@ struct ContentView: View {
                 }
             })
             .navigationTitle("Search Albums")
+            .sheet(isPresented: $showAlbum) {
+                AlbumDetailView()
+            }
         }
         .background(Color("Primary"))
         .navigationViewStyle(.stack)

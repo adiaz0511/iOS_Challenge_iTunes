@@ -15,6 +15,8 @@
 		CAED12DD283D860800004CDF /* Result+Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12DC283D860800004CDF /* Result+Album.swift */; };
 		CAED12E0283D867000004CDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAED12E2283D867000004CDF /* Localizable.strings */; };
 		CAED12E7283D86FF00004CDF /* AlbumRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12E6283D86FF00004CDF /* AlbumRow.swift */; };
+		CAED12E9283D8C1C00004CDF /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12E8283D8C1C00004CDF /* AlbumDetailView.swift */; };
+		CAED12EB283D8CB800004CDF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12EA283D8CB800004CDF /* Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CAED12E1283D867000004CDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CAED12E3283D867900004CDF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CAED12E6283D86FF00004CDF /* AlbumRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRow.swift; sourceTree = "<group>"; };
+		CAED12E8283D8C1C00004CDF /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
+		CAED12EA283D8CB800004CDF /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		CAED12D9283D85E600004CDF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CAED12EA283D8CB800004CDF /* Styles.swift */,
 				CAED12DC283D860800004CDF /* Result+Album.swift */,
 				CAED12DA283D85EF00004CDF /* AlbumViewModel.swift */,
 				CAED12E2283D867000004CDF /* Localizable.strings */,
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				CAED12CD283D858200004CDF /* ContentView.swift */,
+				CAED12E8283D8C1C00004CDF /* AlbumDetailView.swift */,
 				CAED12E5283D86C300004CDF /* Items */,
 			);
 			path = Views;
@@ -177,6 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAED12DD283D860800004CDF /* Result+Album.swift in Sources */,
+				CAED12EB283D8CB800004CDF /* Styles.swift in Sources */,
+				CAED12E9283D8C1C00004CDF /* AlbumDetailView.swift in Sources */,
 				CAED12DB283D85EF00004CDF /* AlbumViewModel.swift in Sources */,
 				CAED12E7283D86FF00004CDF /* AlbumRow.swift in Sources */,
 				CAED12CE283D858200004CDF /* ContentView.swift in Sources */,
