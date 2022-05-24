@@ -26,7 +26,7 @@ extension View {
     }
 }
 
-// ButtonStyle for a bouncy button with configurable background and shape
+// ButtonStyle for a bouncy button with configurable background and shape radius
 struct BouncyButton: ButtonStyle {
     var color: LinearGradient
     var cornerRadius: CGFloat
