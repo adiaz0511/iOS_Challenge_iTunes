@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct iOS_Challenge_iTunesApp: App {
+    var albumViewModel = AlbumViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(albumViewModel)
         }
     }
 }

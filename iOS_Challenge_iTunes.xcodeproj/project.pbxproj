@@ -13,6 +13,8 @@
 		CAED12D3283D858300004CDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAED12D2283D858300004CDF /* Preview Assets.xcassets */; };
 		CAED12DB283D85EF00004CDF /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12DA283D85EF00004CDF /* AlbumViewModel.swift */; };
 		CAED12DD283D860800004CDF /* Result+Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12DC283D860800004CDF /* Result+Album.swift */; };
+		CAED12E0283D867000004CDF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAED12E2283D867000004CDF /* Localizable.strings */; };
+		CAED12E7283D86FF00004CDF /* AlbumRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12E6283D86FF00004CDF /* AlbumRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,9 @@
 		CAED12D2283D858300004CDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAED12DA283D85EF00004CDF /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		CAED12DC283D860800004CDF /* Result+Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Album.swift"; sourceTree = "<group>"; };
+		CAED12E1283D867000004CDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAED12E3283D867900004CDF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CAED12E6283D86FF00004CDF /* AlbumRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +62,7 @@
 			children = (
 				CAED12CB283D858200004CDF /* iOS_Challenge_iTunesApp.swift */,
 				CAED12D9283D85E600004CDF /* Models */,
-				CAED12CD283D858200004CDF /* ContentView.swift */,
+				CAED12E4283D86AA00004CDF /* Views */,
 				CAED12CF283D858300004CDF /* Assets.xcassets */,
 				CAED12D1283D858300004CDF /* Preview Content */,
 			);
@@ -77,8 +82,26 @@
 			children = (
 				CAED12DC283D860800004CDF /* Result+Album.swift */,
 				CAED12DA283D85EF00004CDF /* AlbumViewModel.swift */,
+				CAED12E2283D867000004CDF /* Localizable.strings */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CAED12E4283D86AA00004CDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAED12CD283D858200004CDF /* ContentView.swift */,
+				CAED12E5283D86C300004CDF /* Items */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAED12E5283D86C300004CDF /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				CAED12E6283D86FF00004CDF /* AlbumRow.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +146,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = CAED12BF283D858200004CDF;
 			productRefGroup = CAED12C9283D858200004CDF /* Products */;
@@ -140,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAED12D3283D858300004CDF /* Preview Assets.xcassets in Resources */,
+				CAED12E0283D867000004CDF /* Localizable.strings in Resources */,
 				CAED12D0283D858300004CDF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +178,7 @@
 			files = (
 				CAED12DD283D860800004CDF /* Result+Album.swift in Sources */,
 				CAED12DB283D85EF00004CDF /* AlbumViewModel.swift in Sources */,
+				CAED12E7283D86FF00004CDF /* AlbumRow.swift in Sources */,
 				CAED12CE283D858200004CDF /* ContentView.swift in Sources */,
 				CAED12CC283D858200004CDF /* iOS_Challenge_iTunesApp.swift in Sources */,
 			);
@@ -160,11 +186,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		CAED12E2283D867000004CDF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAED12E1283D867000004CDF /* en */,
+				CAED12E3283D867900004CDF /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		CAED12D4283D858300004CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -225,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
