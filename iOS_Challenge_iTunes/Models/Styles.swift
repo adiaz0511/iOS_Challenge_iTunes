@@ -8,13 +8,7 @@
 import SwiftUI
 
 extension View {
-    func boxedFrame(bgColor: Color, radius: CGFloat, shadowColor: Color, shadowRadius: CGFloat, shadowYOffset: CGFloat) -> some View {
-        self
-            .background(bgColor)
-            .clipShape(RoundedRectangle(cornerRadius: radius, style: .continuous))
-            .shadow(color: shadowColor, radius: shadowRadius, x: 0, y: shadowYOffset)
-    }
-    
+    // Modifier to create a boxed frame with configurable color and radius
     func dashedBoxedFrame(bgColor: Color, radius: CGFloat) -> some View {
         self
             .foregroundColor(bgColor)
@@ -32,6 +26,7 @@ extension View {
     }
 }
 
+// ButtonStyle for a bouncy button with configurable background and shape
 struct BouncyButton: ButtonStyle {
     var color: LinearGradient
     var cornerRadius: CGFloat
