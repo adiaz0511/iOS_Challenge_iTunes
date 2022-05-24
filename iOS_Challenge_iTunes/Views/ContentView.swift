@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var albumVM: AlbumViewModel
-    @State var searchText = ""
-    @State var showAlbum = false
+    @EnvironmentObject var albumVM: AlbumViewModel // Model to access the iTunes Search API
+    @State var searchText = "" // Var that holds the search text
+    @State var showAlbum = false // Bool to open the modal with the Album's details
+    @State var errorArtist = "" // Text to show when the artist searched yielded no result
     
     var body: some View {
         NavigationView {
@@ -32,17 +33,18 @@ struct ContentView: View {
                     .listStyle(.plain)
                 } else {
                     // If the list is empty, show this message
-                    Text("No results")
-                        .animation(.linear)
+                    Text("No results") + Text(errorArtist != "" ? " for " : "") + Text(errorArtist)
+                    
                 }
                 
             }
             .searchable(text: $searchText)
             .disableAutocorrection(true)
-            .onSubmit(of: .search, {
+            .onSubmit(of: .search, { // When the user submits a search, retrieve the albums of the inputed artist
+                errorArtist = searchText
                 Task {
                     do {
-                        try await albumVM.getAlbum(artist: searchText)
+                        try await albumVM.getAlbums(artist: searchText)
                     } catch {
                         print("Error", error)
                     }
@@ -51,6 +53,15 @@ struct ContentView: View {
             .navigationTitle("Search Albums")
             .sheet(isPresented: $showAlbum) {
                 AlbumDetailView()
+            }
+            .task { // Default search for "Trivecta" (with the option to still search for other artists above)
+                Task {
+                    do {
+                        try await albumVM.getAlbums(artist: "Trivecta")
+                    } catch {
+                        print("Error", error)
+                    }
+                }
             }
         }
         .background(Color("Primary"))

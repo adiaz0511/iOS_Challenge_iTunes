@@ -13,7 +13,7 @@ class AlbumViewModel: ObservableObject {
     @Published var selectedAlbum = Album.defaultAlbum // Holds the album that the user selects from the list to see its details
     
     // Retrieves the given albums of the specified artist
-    func getAlbum(artist: String) async throws {
+    func getAlbums(artist: String) async throws {
         let artistName = artist.replacingOccurrences(of: " ", with: "+") // Replace spaces with '+'
         let albumURL = "https://itunes.apple.com/search?term=" + artistName + "&entity=album"
         guard let url = URL(string: albumURL) else { fatalError("Missing URL") }

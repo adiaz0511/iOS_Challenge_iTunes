@@ -17,10 +17,13 @@
 		CAED12E7283D86FF00004CDF /* AlbumRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12E6283D86FF00004CDF /* AlbumRow.swift */; };
 		CAED12E9283D8C1C00004CDF /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12E8283D8C1C00004CDF /* AlbumDetailView.swift */; };
 		CAED12EB283D8CB800004CDF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12EA283D8CB800004CDF /* Styles.swift */; };
+		CAED12ED283D950700004CDF /* AlbumMainInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12EC283D950700004CDF /* AlbumMainInfoItem.swift */; };
+		CAED12EF283D952100004CDF /* AlbumLinksItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12EE283D952100004CDF /* AlbumLinksItem.swift */; };
+		CAED12F1283D953800004CDF /* AlbumMiscInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED12F0283D953800004CDF /* AlbumMiscInfoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CAED12C8283D858200004CDF /* iOS_Challenge_iTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Challenge_iTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAED12C8283D858200004CDF /* iOS Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAED12CB283D858200004CDF /* iOS_Challenge_iTunesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Challenge_iTunesApp.swift; sourceTree = "<group>"; };
 		CAED12CD283D858200004CDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CAED12CF283D858300004CDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		CAED12E6283D86FF00004CDF /* AlbumRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRow.swift; sourceTree = "<group>"; };
 		CAED12E8283D8C1C00004CDF /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		CAED12EA283D8CB800004CDF /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		CAED12EC283D950700004CDF /* AlbumMainInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumMainInfoItem.swift; sourceTree = "<group>"; };
+		CAED12EE283D952100004CDF /* AlbumLinksItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumLinksItem.swift; sourceTree = "<group>"; };
+		CAED12F0283D953800004CDF /* AlbumMiscInfoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumMiscInfoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,7 @@
 		CAED12C9283D858200004CDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAED12C8283D858200004CDF /* iOS_Challenge_iTunes.app */,
+				CAED12C8283D858200004CDF /* iOS Challenge.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				CAED12E6283D86FF00004CDF /* AlbumRow.swift */,
+				CAED12EC283D950700004CDF /* AlbumMainInfoItem.swift */,
+				CAED12EE283D952100004CDF /* AlbumLinksItem.swift */,
+				CAED12F0283D953800004CDF /* AlbumMiscInfoItem.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -127,7 +136,7 @@
 			);
 			name = iOS_Challenge_iTunes;
 			productName = iOS_Challenge_iTunes;
-			productReference = CAED12C8283D858200004CDF /* iOS_Challenge_iTunes.app */;
+			productReference = CAED12C8283D858200004CDF /* iOS Challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -185,10 +194,13 @@
 				CAED12DD283D860800004CDF /* Result+Album.swift in Sources */,
 				CAED12EB283D8CB800004CDF /* Styles.swift in Sources */,
 				CAED12E9283D8C1C00004CDF /* AlbumDetailView.swift in Sources */,
+				CAED12ED283D950700004CDF /* AlbumMainInfoItem.swift in Sources */,
 				CAED12DB283D85EF00004CDF /* AlbumViewModel.swift in Sources */,
 				CAED12E7283D86FF00004CDF /* AlbumRow.swift in Sources */,
+				CAED12F1283D953800004CDF /* AlbumMiscInfoItem.swift in Sources */,
 				CAED12CE283D858200004CDF /* ContentView.swift in Sources */,
 				CAED12CC283D858200004CDF /* iOS_Challenge_iTunesApp.swift in Sources */,
+				CAED12EF283D952100004CDF /* AlbumLinksItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +357,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.arturodiaz.iOS-Challenge-iTunes";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "iOS Challenge";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,7 +386,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.arturodiaz.iOS-Challenge-iTunes";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "iOS Challenge";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
