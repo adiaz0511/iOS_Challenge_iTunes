@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let screen = UIScreen.main.bounds
+
 extension View {
     // Modifier to create a boxed frame with configurable color and radius
     func dashedBoxedFrame(bgColor: Color, radius: CGFloat) -> some View {

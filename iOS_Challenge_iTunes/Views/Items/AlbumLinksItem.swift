@@ -9,7 +9,7 @@ import SwiftUI
 
 // Album price, artist URL and album URL
 struct AlbumLinksItem: View {
-    @EnvironmentObject var albumVM: AlbumViewModel
+    @EnvironmentObject var albumVM: AlbumViewModel // Model to access the iTunes Search API
 
     var body: some View {
         VStack(alignment: .center, spacing: 15) {

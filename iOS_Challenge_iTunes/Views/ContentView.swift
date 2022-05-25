@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var albumVM: AlbumViewModel // Model to access the iTunes Search API
-    @State var searchText = "" // Var that holds the search text
+    @State var searchText = "Trivecta" // Var that holds the search text
     @State var showAlbum = false // Bool to open the modal with the Album's details
     @State var errorArtist = "" // Text to show when the artist searched yielded no result
     
@@ -33,7 +33,7 @@ struct ContentView: View {
                     .listStyle(.plain)
                 } else {
                     // If the list is empty, show this message
-                    Text("No results") + Text(errorArtist != "" ? " for " : "") + Text(errorArtist)
+                    Text("No results") + Text(errorArtist != "" ? " for " : "") + Text("\"\(errorArtist)\"")
                     
                 }
                 
@@ -41,7 +41,6 @@ struct ContentView: View {
             .searchable(text: $searchText)
             .disableAutocorrection(true)
             .onSubmit(of: .search, { // When the user submits a search, retrieve the albums of the inputed artist
-                errorArtist = searchText
                 Task {
                     do {
                         try await albumVM.getAlbums(artist: searchText)
@@ -49,6 +48,7 @@ struct ContentView: View {
                         print("Error", error)
                     }
                 }
+                errorArtist = searchText // sets errorArtist to the searched artist in case there are no results and it needs to be integrated into the error message
             })
             .navigationTitle("Search Albums")
             .sheet(isPresented: $showAlbum) {

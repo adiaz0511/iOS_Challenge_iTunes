@@ -9,8 +9,9 @@ import SwiftUI
 
 // Album artwork, title, artist, track count and release date
 struct AlbumMainInfoItem: View {
-    @EnvironmentObject var albumVM: AlbumViewModel
-
+    @EnvironmentObject var albumVM: AlbumViewModel // Model to access the iTunes Search API
+    var imageWidth = screen.width / 3 > 160 ? 160 : screen.width / 3 // imageWidth with a limit of 160 based off the phones width divided by 3
+    
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
             AsyncImage(
@@ -19,7 +20,7 @@ struct AlbumMainInfoItem: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 150, alignment: .center)
+                        .frame(width: imageWidth, alignment: .center)
                         .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                         .shadow(color: Color.black.opacity(0.1), radius: 15, x: 0, y: 15)
                 },

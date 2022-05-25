@@ -9,11 +9,11 @@ import SwiftUI
 
 // Album Genre, copyright and country
 struct AlbumMiscInfoItem: View {
-    @EnvironmentObject var albumVM: AlbumViewModel
+    @EnvironmentObject var albumVM: AlbumViewModel // Model to access the iTunes Search API
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Genre: ") + Text(albumVM.selectedAlbum.primaryGenreName ?? "No genre")
+            Text("Genre: ") + Text(albumVM.selectedAlbum.primaryGenreName ?? "No genre") 
             
             Text("\(albumVM.selectedAlbum.copyright ?? "No label") ·  \(albumVM.selectedAlbum.country ?? "No country")")
         }

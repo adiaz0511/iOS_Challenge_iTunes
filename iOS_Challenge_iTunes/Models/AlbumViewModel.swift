@@ -14,9 +14,13 @@ class AlbumViewModel: ObservableObject {
     
     // Retrieves the given albums of the specified artist
     func getAlbums(artist: String) async throws {
-        let artistName = artist.replacingOccurrences(of: " ", with: "+") // Replace spaces with '+'
+        var artistName = artist.replacingOccurrences(of: " ", with: "+") // Replace spaces with '+'
+        let removeCharacters: Set<Character> = ["ç", "Ç", "á", "é", "í", "ó", "ú", "´"]
+        artistName.removeAll(where: { removeCharacters.contains($0) } ) // Remove some special characters
+        
         let albumURL = "https://itunes.apple.com/search?term=" + artistName + "&entity=album"
         guard let url = URL(string: albumURL) else { fatalError("Missing URL") }
+        
         let urlRequest = URLRequest(url: url)
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         
@@ -28,3 +32,4 @@ class AlbumViewModel: ObservableObject {
         }
     }
 }
+

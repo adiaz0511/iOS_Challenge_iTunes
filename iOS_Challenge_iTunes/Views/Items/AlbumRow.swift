@@ -17,7 +17,7 @@ struct AlbumRow: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 80, height: 80)
                 .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                .shadow(color: Color.black.opacity(0.1), radius: 15, x: 0, y: 15)
+                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(album.collectionName ?? "")

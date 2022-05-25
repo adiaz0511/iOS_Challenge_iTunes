@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AlbumDetailView: View {
-    @EnvironmentObject var albumVM: AlbumViewModel
-    @Environment(\.presentationMode) private var presentationMode
+    @EnvironmentObject var albumVM: AlbumViewModel // Model to access the iTunes Search API
+    @Environment(\.presentationMode) private var presentationMode // Environment variable to dismiss the modal
     
     var body: some View {
         NavigationView {
@@ -32,7 +32,7 @@ struct AlbumDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .automatic) {
                     Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
+                        self.presentationMode.wrappedValue.dismiss() // dismisses the modal
                     }) {
                         Text("Done")
                     }
